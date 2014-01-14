@@ -5,7 +5,9 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', include('apps.core.urls'), name='home'),
+    # Examples:
+    # url(r'^$', 'spbt_leaderboard.views.home', name='home'),
+    # url(r'^spbt_leaderboard/', include('spbt_leaderboard.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
