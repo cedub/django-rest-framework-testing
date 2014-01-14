@@ -1,0 +1,3 @@
+*.pyc
+apps/core/static/
+apps/core/templates/
