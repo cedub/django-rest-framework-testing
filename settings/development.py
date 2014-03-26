@@ -1,3 +1,5 @@
+import os
+
 from settings.common import *
 
 # Django settings for motiv8_django project in development.
@@ -18,3 +20,6 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default.
     }
 }
+
+
+DATABASES['default']['NAME'] = '{0}_{1}'.format(DATABASES['default']['NAME'], os.environ["LOGNAME"])
