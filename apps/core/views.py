@@ -1,6 +1,7 @@
-from django.views.generic.base import View
-from django.shortcuts import render
+from rest_framework import generics
 
-class Index(View):
-    def get(self, request, *args, **kwargs):
-        return render(request, 'core/index.html')
+from apps.core import models
+
+
+class ListCreateTodoApp(generics.ListCreateAPIView):
+    model = models.TodoApp
